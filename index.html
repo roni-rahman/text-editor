@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/231e7db441.js" crossorigin="anonymous"></script>
+    <style>
+        .underline {
+            text-decoration: underline;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .textUppercase {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <main class="w-3/4 mx-auto bg-blue-300 mt-10">
+        <h1 class="text-center text-2xl text-white py-5">Text Editor</h1>
+        <div  id="fontSizeTest" class="editor border border-sky-400 p-5 bg-blue-200 ">
+            <div class="flex justify-between">
+                <div class="left-section">
+                    <button id="bold-btn" onclick="toggleClass('bold')">
+                        <i class="fa-solid fa-bold mr-2"></i>
+                    </button>
+                    <button id="italic-btn" onclick="toggleClass('italic')">
+                        <i class="fa-solid fa-italic mr-2"></i>
+                    </button>
+                    <button id="underline-btn" onclick="toggleClass('underline')">
+                        <i class="fa-solid fa-underline"></i>
+                    </button>
+                </div>
+    
+                <div class="middle-section">
+                    <button>
+                        <i class="fa-solid fa-align-left mr-2" onclick="apllyClass('left')"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-align-center mr-2" onclick="apllyClass('center')"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-align-right mr-2" onclick="apllyClass('right')"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-align-justify" onclick="apllyClass('justify')"></i>
+                    </button>
+                </div>
+    
+                <div class="right-section">
+                    <input class="w-12 rounded p-1" type="number" name="" id="fontSize" min="12" value="20">
+                    <button  onclick="toggleClass('textUppercase')">
+                        <i class="ml-3 fa-solid fa-a"></i>
+                    </button>
+                    <input class="ml-3" type="color" name="" id="colorId">
+                </div>
+                
+            </div>
+            <div class="mt-5">
+                <textarea class="w-full h-80 p-3" name="" id="output" cols="30" rows="10"></textarea>
+            </div>
+
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
